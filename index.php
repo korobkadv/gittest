@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body>
-	
+	<h1>Проба GIT</h1>
 	
 <?php
 
