@@ -2,9 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Новое изменение</title>
 	</head>
 	<body>
+	
+	
 <?php
 
 $test = "Hello";
