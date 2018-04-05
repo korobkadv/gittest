@@ -8,6 +8,8 @@
 	<body>
 	<h1>Проба GIT</h1>
 	
+<p>Hello World</p>	
+	
 <?php
 
 $test = "Hello";
@@ -17,4 +19,6 @@ echo "$$name";
 ?>
 	</body>
 </html>
+
+
 
