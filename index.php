@@ -17,6 +17,8 @@ $name = "test";
 echo "$$name";
 
 ?>
+
+<p>Привет</p>
 	</body>
 </html>
 
