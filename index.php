@@ -18,7 +18,6 @@ echo "$$name";
 
 ?>
 
-<p>Привет</p>
 	</body>
 </html>
 
