@@ -13,7 +13,7 @@ header {
 }
 
 nav {
-    width: 70%;
+    width: 800px;
     margin: 75px auto 100px auto;
 }
 
@@ -33,7 +33,7 @@ li {
 }
 
 main {
-    width: 85%;
+    width: 1000px;
     margin: auto;
 }
 
