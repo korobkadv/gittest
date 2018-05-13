@@ -28,7 +28,12 @@ li {
     font-size: 14px;
 }
 
-.hover {
+a, a:visited {
+	text-decoration: none;
+	color: #626262;
+}
+
+a:hover {
     color: #03a9f4;
 }
 
