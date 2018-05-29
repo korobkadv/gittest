@@ -6,12 +6,7 @@ main {
 }
 body { 
     counter-reset: headline;
-  }
-  
-  body { 
-    counter-reset: headline;
-  }
-  
+  }  
   ul {
       list-style: none;
   }
