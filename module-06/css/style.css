@@ -60,7 +60,7 @@ header {
     font-weight: 700;
     font-size: 14px;
     color: #95e1d3;
-    vertical-align: middle;
+    
 }
 .menu li a:hover {
     display: block;
@@ -72,7 +72,7 @@ header {
     font-size: 14px;
     color: #f38181;
     transform:  translateY(-3px);
-    vertical-align: middle;
+    
 }
 .menu li a:hover::after {
     content: "";
@@ -80,7 +80,7 @@ header {
     width: 100%;
     border-bottom: 2px solid #f38181;
     margin: 5px auto 0px auto;
-    vertical-align: middle;
+   
 }
 
 ul {
@@ -190,7 +190,7 @@ main {
 .text-article {
     font-family: 'Roboto', arial, sans-serif;
     font-size: 14px;
-    font-weight 100;
+    font-weight: 100;
     text-transform: uppercase;
     float: left;
     padding: 0px;
@@ -240,7 +240,7 @@ main {
     color: #333333;
     font-family: 'Roboto', arial, sans-serif;
     font-size: 14px;
-    font-weight 100;
+    font-weight: 100;
     text-transform: uppercase;
     padding: 0px;
     margin: 20px 0px 10px 0px;
