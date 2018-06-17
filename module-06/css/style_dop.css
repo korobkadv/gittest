@@ -7,56 +7,64 @@ main {
 body { 
     counter-reset: headline;
   }  
-  ul {
-      list-style: none;
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    width: 500px;
   }
   
-  li {
-      float: left;
-      width: 100px;
-      text-align: center;
-      font-size: 14px;
+  .item  {
+    width: 140px;
+    height: 120px;
+    border-radius: 25px;
+  }
+  .center {
+    justify-content: center;
   }
   
-  .task_two li:nth-child(-n + 4) {
-    background-color: #88292F;
+  .product {
+      display: block;
+      background-color: #e9f0fd;
+      width: 255px;
+      margin: 15px;
+      padding: 15px;
+      border: 1px solid #000000;
   }
   
-  .task_two li:nth-child(n + 4) {
-    background-color: #5DB7DE;
+  .product>img {
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  }
+  .product>img:hover {
+    box-shadow: 0 0 25px rgba(0,0,0,1);
   }
   
-  .task_two li:nth-child(n + 7) {
-    background-color: #0D5D56;
+  @keyframes animationIMG {
+    from { opacity: 0; }
+    to { transform: rotate(5deg); }
+  }
+  .product>img:hover {
+    animation-name: animationIMG;
+    animation-duration: 0.2s;
   }
   
-  .task_three li::before {
-    content: "\2192";
-    font-size: 18px;
-    margin: 0px 3px;
+  button:hover {
+    transition-property: 
+        background,
+        width;
+      transition-duration: 0.2s;
+      background: #FF0000;
+      width: 100%;
   }
   
-  a, a:visited {
-    text-decoration: none;
-    color: #0E1116;
+  .text-article:hover {
+      transition-property: 
+        color,
+        font-size;
+      transition-duration: 0.2s;
+      color: #FF0000;
+      transition-duration: 0.3s;
+      font-size: 25px;
   }
   
-  a:hover  {
-      color: #03a9f4;
-  }
-  
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .task_four li {
-    counter-increment: headline;
-  }
-  .task_four li:before {
-    dysplay: inline-block;
-    content: counter(headline, upper-roman);
-    margin: 0px 5px;
-    vertical-align: middle;
-  }

@@ -7,56 +7,168 @@ main {
 body { 
     counter-reset: headline;
   }  
-  ul {
-      list-style: none;
-  }
-  
-  li {
-      float: left;
-      width: 100px;
-      text-align: center;
-      font-size: 14px;
-  }
-  
-  .task_two li:nth-child(-n + 4) {
-    background-color: #88292F;
-  }
-  
-  .task_two li:nth-child(n + 4) {
-    background-color: #5DB7DE;
-  }
-  
-  .task_two li:nth-child(n + 7) {
-    background-color: #0D5D56;
-  }
-  
-  .task_three li::before {
-    content: "\2192";
-    font-size: 18px;
-    margin: 0px 3px;
-  }
-  
-  a, a:visited {
-    text-decoration: none;
-    color: #0E1116;
-  }
-  
-  a:hover  {
-      color: #03a9f4;
-  }
-  
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .task_four li {
-    counter-increment: headline;
-  }
-  .task_four li:before {
-    dysplay: inline-block;
-    content: counter(headline, upper-roman);
-    margin: 0px 5px;
-    vertical-align: middle;
-  }
+ /*********** Задание 1 */
+div {
+  background: #fff url("https://2.bp.blogspot.com/-ptGqlI7-RJU/T_NBlUmP48I/AAAAAAAACEc/NMgCL9j8zYM/s1600/seamless_denim_fabric_texture.jpg");
+}
+.main {
+display: block;
+height: 200px;
+background: linear-gradient(rgba(233,214,0,.3), rgba(55,250,50,.3));
+}
+
+/*********** Задание 2 */
+
+.main2 {
+display: block;
+width: 400px;
+height: 400px;
+background: #424242;
+position: relative;
+}
+
+.child1 {
+display: block;
+width: 100px;
+height: 100px;
+background: #2ea2f3;
+position: absolute;
+}
+
+.child2 {
+display: block;
+width: 100px;
+height: 100px;
+background: #199586;
+position: absolute;
+top: 0px;
+left: 150px;
+}
+
+.child3 {
+display: block;
+width: 100px;
+height: 100px;
+background: #e62365;
+position: absolute;
+top: 0px;
+right: 0px;
+}
+
+.child4 {
+display: block;
+width: 100px;
+height: 100px;
+background: #f1483d;
+position: absolute;
+top: 150px;
+left: 0px;
+}
+
+.child5 {
+display: block;
+width: 100px;
+height: 100px;
+background: #fc5b2d;
+position: absolute;
+top: 150px;
+left: 150px;
+}
+
+.child6 {
+display: block;
+width: 100px;
+height: 100px;
+background: #9b12ae;
+position: absolute;
+top: 150px;
+right: 0px;
+}
+
+.child7 {
+display: block;
+width: 100px;
+height: 100px;
+background: #4db051;
+position: absolute;
+bottom: 0px;
+left: 0px;
+}
+
+.child8 {
+display: block;
+width: 100px;
+height: 100px;
+background: #fcef41;
+position: absolute;
+bottom: 0px;
+left: 150px;
+}
+
+.child9 {
+display: block;
+width: 100px;
+height: 100px;
+background: #398ef2;
+position: absolute;
+bottom: 0px;
+right: 0px;
+}
+
+/*********** Задание 3 */
+
+.wrapper {
+max-width: 600px;
+height: 300px;
+margin: auto;
+} 
+
+.menu {
+list-style: none;
+padding: 10px;
+/*   border: 10px solid #424242; */
+font-size: 16px;
+text-transform: uppercase;
+text-align: center;
+}
+
+.menu-item {
+position: relative;
+display: inline-block;
+}
+
+.menu-item > a,
+.submenu-item > a {
+display: inline-block;
+padding: 15px 30px; 
+color: #424242;
+background-color: #fff;
+text-decoration: none;
+}
+
+.menu-item > a:hover,
+.submenu-item > a:hover{
+background: #4db051;
+color: #ffffff;
+}
+
+.submenu {
+/* делаем невидимым .submenu */
+display: none;
+/* при появлении .submenu окажется поверх других элементов */
+position: absolute;
+top: 100%;
+left: 0;
+list-style: none;
+background-color: #fcef41;
+box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* делаем .submenu видимым */
+.menu-item:hover > .submenu {
+display: block;
+}
+
+.submenu-item {
+white-space: nowrap;
+}
