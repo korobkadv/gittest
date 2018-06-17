@@ -269,6 +269,7 @@ main {
 .button {
     display: none;
 }
+
 .product2_1:hover .button {
     display: flex;
     flex-direction: row;
@@ -294,30 +295,50 @@ main {
     height: 470px;
  } 
 
-.product2_1:hover>.pic2 {
+
+
+
+
+ .product2_1:hover>.pic2 {
     display: block;
     width: 380px;
     height: 470px;
+    transition-property: 
+      background,
+      transform,
+      box-shadow;
+    transition-duration: 0.2s;
     background: linear-gradient(rgba(243,129,129,.8), rgba(252,227,138,.8));
     transform: translate(-10px, -10px);
-    box-shadow: 10px 10px 0px#95e1d3; 
- }  
- .product2_2:hover>.pic2 {
+    box-shadow: 10px 10px 0px#95e1d3;
+}
+
+.product2_2:hover>.pic2 {
     display: block;
     width: 380px;
     height: 470px;
+    transition-property: 
+      background,
+      transform,
+      box-shadow;
+    transition-duration: 0.2s;
     background: linear-gradient(rgba(243,129,129,.8), rgba(252,227,138,.8));
     transform: translate(-10px, -10px);
-    box-shadow: 10px 10px 0px#95e1d3; 
- } 
- .product2_3:hover>.pic2 {
+    box-shadow: 10px 10px 0px#95e1d3;
+}
+.product2_3:hover>.pic2 {
     display: block;
     width: 380px;
     height: 470px;
+    transition-property: 
+      background,
+      transform,
+      box-shadow;
+    transition-duration: 0.2s;
     background: linear-gradient(rgba(243,129,129,.8), rgba(252,227,138,.8));
     transform: translate(-10px, -10px);
-    box-shadow: 10px 10px 0px#95e1d3; 
- } 
+    box-shadow: 10px 10px 0px#95e1d3;
+}
 
  .f {
     width: 56px;
