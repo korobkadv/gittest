@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Courgette%7CRoboto:100,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Модуль 7 - Form</title>
+</head>
+
+<body>
+	<header>
+		<!-- Навигация по сайту -->
+		<nav class="navigation">
+			<h1 class="logo">
+				<a href="#">Golden</a>
+			</h1>
+
+			<ul class="menu">
+				<li>
+					<a href="#">home</a>
+				</li>
+				<li>
+					<a href="#">services</a>
+				</li>
+				<li>
+					<a href="#">portfolio</a>
+				</li>
+				<li>
+					<a href="#">about</a>
+				</li>
+				<li>
+					<a href="#">contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+		<section class="section_produkct">
+			<h2 class="caption">Services</h2>
+			<p class="section_lorem">Proin iaculis purus consequat sem cure.</p>
+			
+			<div class="product_container">
+				
+				<div class="product">
+					<img src="img/basket.png" alt="basket" width="74" height="73" />
+					<h3 class="text-article">E-Commerce</h3>
+					<p class="loremP">Proin iaculis purus consequat sem cure 
+						digni ssim. Donec porttitora entum suscipit 
+						aenean rhoncus posuere odio in tincidunt.</p>
+				</div>
+
+				<div class="product">
+					<img src="img/laptop.png" alt="laptop" width="74" height="73" />
+					<h3 class="text-article">Responsive Web</h3>
+					<p class="loremP">Proin iaculis purus consequat sem cure 
+						digni ssim. Donec porttitora entum suscipit 
+						aenean rhoncus posuere odio in tincidunt.</p>
+				</div>
+
+				<div class="product">
+						<img src="img/locked.png" alt="locked" width="74" height="73" />
+					<h3 class="text-article">Web Security</h3>
+					<p class="loremP">Proin iaculis purus consequat sem cure 
+						digni ssim. Donec porttitora entum suscipit 
+						aenean rhoncus posuere odio in tincidunt.</p>
+				</div>
+			</div>
+		</section>
+
+
+	<section class="section_produkct2_0">
+		<section class="section_produkct2">
+			<h2 class="caption">Contact us</h2>
+			<p class="section_lorem">Proin iaculis purus consequat sem cure.</p>
+			
+			<div class="product_container">
+				
+				<form action="#" method="POST">
+
+
+						<table>
+								<tbody>
+								  <tr>
+									<td><input class="input" type="text" name="name" placeholder="YOUR NAME *" required></td>
+									<td rowspan="3"><textarea name="message" placeholder="YOURS MESSAGE" required></textarea></td>
+								  </tr>
+								  <tr>
+									<td><input class="input" type="email" name="email" placeholder="YOUR E-MAIL*" required></td>
+								</tr>
+								<tr>
+										<td><input class="input" type="text" name="subject" placeholder="SUBJECT"></td>
+									</tr>
+									<tr>
+											<td colspan="2"><input class="submit" type="submit" value="SEND MESSAGE"></td>
+										</tr>
+								</tbody>
+						</table>
+	
+					
+				</form>
+				
+			</div>
+		</section>
+	</section>
+	</main>
+
+</body>
+
+</html>
