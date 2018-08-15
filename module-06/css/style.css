@@ -1,6 +1,6 @@
 body {
     background-color: #FFF;
-    font-family: "Open Sans", arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #626262;
     width: 100%;
@@ -14,41 +14,39 @@ body {
 }
 
 header {
-    width: 1170px;
+    width: 1270px;
     border: 0px solid #626262;
     margin: 0px auto;
     padding: 0px 0px 0px 0px;
 }
 
 .navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
 }
 
 .logo {
     
     width: 100px;
-    margin: 37px 0px 0px 15px;
+    margin: 23px 0px 0px 65px;
     font-size: 30px;
     color: #95e1d3;
 }
 .logo a, .logo a:hover, .logo a:visited {
     width: 100px;
     margin: 0px 0px 0px 0px;
-    font-family: "Times New Roman", Times, serif;
     font-size: 30px;
-    font-weight: 100;
+    font-weight: 700;
     color: #95e1d3;
 }
 
 .menu {
     height: 50px;
-    margin: 43px 30px 0px 10px;
+    margin: 36px 0px 0px 10px;
     text-transform: uppercase;
-    font-family: "Arial", Times, serif;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 14px;
     vertical-align: middle;
 }
@@ -56,8 +54,7 @@ header {
     height: 50px;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Roboto", Times, serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     color: #95e1d3;
     
@@ -67,7 +64,6 @@ header {
     height: 50px;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Roboto", Times, serif;
     font-weight: 700;
     font-size: 14px;
     color: #f38181;
@@ -78,8 +74,8 @@ header {
     content: "";
     display: block;
     width: 100%;
-    border-bottom: 2px solid #f38181;
-    margin: 5px auto 0px auto;
+    border-bottom: 3px solid #f38181;
+    margin: 14px auto 0px auto;
    
 }
 
@@ -92,7 +88,7 @@ ul {
 li {
     display: inline-block;
     text-align: center;
-    margin: 0px 15px 0px 0px;
+    margin: 0px 0px 0px 52px;
     padding: 0px;
 }
 
@@ -100,15 +96,6 @@ h1 {
     margin: 0px;
     padding: 0px;
     color: #555252;
-}
-
-.caption {
-    display: block;
-    font-size: 48px;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin: 0px auto 0px auto;
-    padding: 0px;
 }
 
 .menu a, .menu a:visited {
@@ -130,22 +117,29 @@ a:hover {
 
 main {
     width: 100%;
-    margin: 0px auto;
+    margin: 0px auto 30px auto;
 }
 
 .section_produkct {
 
-    width: 1200px;
+    width: 1300px;
     margin: 0px auto;
     text-align: center;
-    padding: 0px 15px;
+    padding: 0px 0px;
 }
 
-.section_produkct>h3 {
-    font-family: 'Courgette', cursive;
+.courgette {
+    font-family: 'Kaushan Script', cursive;
     font-size: 24px;
     font-weight: 100;
-    margin: 100px 0px 0px 0px;
+    margin: 90px 0px 0px 60px;
+}
+
+.courgette_two {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    font-weight: 100;
+    margin: 5px 0px 0px 60px;
 }
 
 .section_lorem {
@@ -156,31 +150,35 @@ main {
     margin: 0px auto;
 }
 
-.section_produkct>h2 {
+.caption {
     display: block;
-    font-family: "Roboto", Times, serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding: 0px;
     font-weight: 700;
     font-size: 30px;
-    margin: 15px 0px 0px 0px;
+    margin: 15px 0px 0px 60px;
 }
-.section_produkct>h2::after {
+.caption::after {
     content: "";
     display: block;
     width: 60px;
     border-bottom: 3px solid #f38181;
-    margin: 20px auto 50px auto;
+    margin: 36px auto 50px auto;
 }
 
 .product_container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 .product {
     background-color: #ffffff;
-    width: 360px;
+    width: 325px;
     height: 100px;
-    margin: 15px;
+    margin: 15px 0px 55px 80px;
+
 }
 
 .product>img {
@@ -188,20 +186,23 @@ main {
 }
 
 .text-article {
-    font-family: 'Roboto', arial, sans-serif;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
     float: left;
     padding: 0px;
     margin: 0px;
+    color: #000000;
 }
 
 .loremP {
     font-family: 'Roboto', arial, sans-serif;
-    font-size: 14px;
-    padding: 10px; 
+    font-size: 12px;
+    padding: 15px; 
     text-align: left;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #999999;
 }
 .pic {
     margin: 0px;
@@ -216,21 +217,21 @@ main {
     background: url("../img/man1.png");
     width: 380px;
     height: 470px;
-    margin: 90px 10px 120px 10px;
+    margin: 90px 0px 120px 75px;
     text-align: center;
 }
 .product2_2 {
     background: url("../img/man2.png");
     width: 380px;
     height: 470px;
-    margin: 90px 10px 120px 10px;
+    margin: 90px 0px 120px 35px;
     text-align: center;
 }
 .product2_3 {
     background: url("../img/man3.png");
     width: 380px;
     height: 470px;
-    margin: 90px 10px 120px 10px;
+    margin: 90px 0px 120px 35px;
     text-align: center;
 }
 
@@ -238,12 +239,11 @@ main {
     display: block;
     text-align: center;
     color: #333333;
-    font-family: 'Roboto', arial, sans-serif;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
     padding: 0px;
-    margin: 20px 0px 10px 0px;
+    margin: 30px 0px 10px 0px;
 }
 
 .description_price {
@@ -375,7 +375,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1200px;
+    width: 1300px;
     height: 88px;
     border-top: 1px solid #999999;
     padding: 10px;
