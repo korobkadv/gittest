@@ -152,7 +152,7 @@ main {
     display: inline-block;
     width: 104px;
     height: 104px;
-    float: left;
+   
     font-size: 90px;
     text-align: center;
     background-color: rgba(80,157,139,.7);
@@ -162,7 +162,7 @@ main {
     display: inline-block;
     width: 104px;
     height: 104px;
-    float: left;
+   
     font-size: 90px;
     text-align: center;
     background-color: rgba(26,188,156,.7);
@@ -172,7 +172,7 @@ main {
 .text-center {
    display: inline-block;
    text-align: left;
-   float: left; 
+  
    width: 770px;
    height: 104px;
    margin: 0px;
