@@ -38,7 +38,7 @@ header {
     width: 940px;
     border: 0px solid #626262;
     margin: 0px auto;
-    padding: 0px 0px 100px 0px;
+    padding: 0px 0px 83px 0px;
 }
 
 .navigation {
@@ -46,6 +46,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    /* border: 1px solid black; */
 }
 
 .logo { 
@@ -65,27 +66,28 @@ header {
 
 .menu {
     height: 50px;
-    margin: 43px 30px 0px 10px;
+    margin: 50px 0px 0px 10px;
     text-transform: uppercase;
-    font-family: "Roboto-Regular", Times, serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    font-weight: 500;
     vertical-align: middle;
+   
 }
 .menu li a, .menu li a:visited {
     height: 50px;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Roboto-Regular", Times, serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #000000;
     
 }
 .menu li a:hover {
-    display: block;
     height: 50px;
     margin: 0px;
     text-transform: uppercase;
-    font-family: "Roboto-Regular", Times, serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #fed136;  
 }
@@ -99,7 +101,7 @@ ul {
 li {
     display: inline-block;
     text-align: center;
-    margin: 0px 25px 0px 0px;
+    margin: 0px 0px 0px 40px;
     padding: 0px;
 }
 
@@ -111,14 +113,14 @@ h1 {
 
 .caption {
     color: #000000;
-    font-family: "Roboto-Bold", Times, serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     text-transform: uppercase;
     margin: 0px auto 0px auto;
     padding: 0px;
 }
 .section_lorem {
-    font-family: "Roboto-Thin", Times, serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: #999999;
     margin: 10px auto 70px auto;
@@ -149,16 +151,16 @@ main {
 .section_produkct {
     width: 940px;
     height: 475px;
-    margin: 30px auto;
+    margin: 0px auto;
     padding: 0px 15px;
     text-align: center;
 }
 
 .section_produkct2_0 {
     width: 100%;
-    height: 677px;
+    height: 550px;
     margin: 30px auto;
-    padding: 100px 0px 0px 0px;
+    padding: 34px 0px 0px 0px;
     text-align: center;
     background: #222222 url("../img/bg.png");
     background-repeat: no-repeat;
@@ -166,7 +168,7 @@ main {
 }
 .section_produkct2 {
     width: 940px;
-    height: 677px;
+    height: 550px;
     margin: 0px auto;
     padding: 0px;
     text-align: center;
@@ -182,17 +184,35 @@ main {
 .product {
     background-color: #ffffff;
     width: 280px;
-    height: 100px;
+    height: 200px;
     margin: 15px;
+    vertical-align: bottom;
 }
+
+.product:nth-child(1) {
+    background: #FFFFFF url("../img/laptop.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  .product:nth-child(2) {
+    background: #FFFFFF url("../img/basket.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  .product:nth-child(3) {
+    background: #FFFFFF url("../img/locked.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
 
 
 .text-article {
-    font-family: 'Roboto-Bold', arial, sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    
     padding: 0px;
-    margin: 25px auto 10px auto;
+    margin: 100px auto 10px auto;
 }
 
 .loremP {
@@ -210,17 +230,29 @@ main {
     padding: 0px;
 }
 
-table {
-    border-spacing: 30px 25px;
+
+
+
+
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 940px
 }
-tr, td {
-    padding: 0px; 
+.input_div{
+    width: 455px; 
   }
+.textarea {
+    width: 455px; 
+    margin: 0px 0px 0px 20px ;
+}
 
 input {
     font-size: 20px;
     padding: 10px;
-    margin: 0px 0px 0px 0px ;
+    margin: 0px 0px 28px 0px ;
     border: 1px solid #999999;
     width: 430px;
     
@@ -265,4 +297,5 @@ button {
     border: 1px solid #4ec6ab;
     border-radius: 5px;
     padding: 10px 30px;
-}
+} 
+
