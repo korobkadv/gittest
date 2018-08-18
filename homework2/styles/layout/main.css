@@ -68,12 +68,15 @@
 .section-list__link {
 	text-decoration: none;
 	font-size: 12px;
+	display: inline-block;
+	padding-bottom: 2px;
+	border-bottom: 1px solid rgba(51,51,51,0);
 }
 .section-list__link--color {
 	color: #333333;
 }
 .section-list__link--hover:hover {
-	/* border-bottom: 1px solid #444444; */
+	border-bottom: 1px solid rgba(51,51,51,1);
 }
 .img-wrapper__bestseller--text {
   font-size: 12px;
