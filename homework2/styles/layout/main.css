@@ -73,7 +73,7 @@
 	color: #333333;
 }
 .section-list__link--hover:hover {
-	border-bottom: 1px solid #444444;
+	/* border-bottom: 1px solid #444444; */
 }
 .img-wrapper__bestseller--text {
   font-size: 12px;
