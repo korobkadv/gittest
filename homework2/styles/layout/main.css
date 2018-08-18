@@ -26,7 +26,12 @@
 	font-weight: 300;
 	color: #bbbbbb;
 	display: block;
+	padding-bottom: 2px;
 	margin-bottom: 60px;
+	border-bottom: 1px solid rgba(51,51,51,0);
+}
+.section__filter--hover:hover {
+	border-bottom: 1px solid rgba(51,51,51,1);
 }
 .section-list__info {
 	width: 380px;
@@ -147,6 +152,7 @@
 }
 .section-list__desc-1 {
 	border-right: 1px solid #dddddd;
+	margin-right: -4px;
 }
 .section-list__price {
 	margin: 0 auto;
