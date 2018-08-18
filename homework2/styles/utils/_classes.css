@@ -1,0 +1,36 @@
+.text__size_largest {
+    font-size: 28px;
+}
+.text__size_large {
+    font-size: 18px;
+}
+.text__size_normal {
+    font-size: 12px;
+}
+.text_first-letter::first-letter {
+    text-transform: uppercase;
+}
+.text_uppercase {
+    text-transform: uppercase;
+}
+.text__color_dark-grey {
+    color: #333333;
+}
+.text__color_white {
+    color: #ffffff;
+}
+.text__color_grey {
+    color: #777777;
+}
+.text__line-height_2x {
+    line-height: 21px;
+}
+.text__font_cormorant {
+    font-family: 'Cormorant';
+}
+.text__font_roboto-light {
+    font-family: 'Roboto-Light';
+}
+.text__font_roboto-medium {
+    font-family: 'Roboto-Medium';
+}

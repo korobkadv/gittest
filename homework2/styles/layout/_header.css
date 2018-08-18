@@ -1,0 +1,124 @@
+/* @font-face {
+    font-family: 'Roboto-Light';
+    src: url(../font/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url(../font/CormorantUnicase-Medium.ttf);
+}
+
+ */
+
+
+.wrap {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    width: 320px;
+    background-color: #222222;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    
+}
+h1 {
+    font-size: 22px;
+    color: white;
+    font-family: 'Cormorant';
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Roboto-Light';
+}
+
+.list-registration>li>a, .list-menu>li>a {
+    text-decoration: none;
+}
+.list-menu-hover:hover {
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+ 
+}
+.entrance {
+    padding: 0;
+    padding-right: 10px;
+    border-right: 1px solid #474646;
+}
+.cont-position {
+    margin: 0;
+    display: flex;
+    position: relative;
+    width: 30px;
+    align-items: center;
+}
+.namber {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: translateX( 179%) translateY(-151%);
+}
+.head {
+    display: flex;
+}
+.namber {
+    display: flex;
+}
+.list-registration {
+    padding-bottom: 10px;
+}
+@media (min-width: 1600px) {
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1920px;
+    height: 80px;
+    background-color: #222222;
+}
+
+nav {
+    margin: 0 auto;
+    width: 1600px;
+    display: flex;
+    flex-direction: row;
+
+}
+.cont {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-menu>li {
+    margin-right: 36px;
+}
+h1 {
+    margin-right: 106px;
+    font-size: 22px;
+}
+
+.list-registration>li>a, .list-menu>li>a {
+    text-decoration: none;
+    
+}
+.list-registration>li {
+    margin-right: 12px;
+    text-decoration: none;
+}
+.redist {
+    display: flex;
+}
+.list-registration {
+    padding-bottom: 0;
+}
+}
