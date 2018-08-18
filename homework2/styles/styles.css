@@ -2,5 +2,6 @@
 @import url('base/fonts.css');
 @import url('utils/classes.css');
 @import url('layout/header.css');
+@import url('layout/main.css');
 @import url('layout/footer-m.css');
 @import url('layout/footer.css');
