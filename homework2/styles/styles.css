@@ -1,6 +1,6 @@
-@import url('./styles/base/_reset.css');
-@import url('./styles/base/_fonts.css');
-@import url('./styles/utils/_classes.css');
-@import url('./styles/layout/_header.css');
-@import url('./styles/layout/_footer-m.css');
-@import url('./styles/layout/_footer.css');
+@import url('base/_reset.css');
+@import url('base/_fonts.css');
+@import url('utils/_classes.css');
+@import url('layout/_header.css');
+@import url('layout/_footer-m.css');
+@import url('layout/_footer.css');
