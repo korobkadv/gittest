@@ -1,6 +1,6 @@
-@import url(https://korobkadv.github.io/goit-fe-course/homework2/styles/base/_reset.css);
-@import url(https://korobkadv.github.io/goit-fe-course/homework2/styles/base/_fonts.css);
-@import url(https://korobkadv.github.io/goit-fe-course/homework2/styles/utils/_classes.css);
-@import url(https://korobkadv.github.io/goit-fe-course/homework2/styles/layout/_header.css);
-@import url(https://korobkadv.github.io/goit-fe-course/homework2/styles/layout/_footer-m.css);
-@import url(https://korobkadv.github.io/goit-fe-course/homework2/styles/layout/_footer.css);
+@import url(base/_reset.css);
+@import url(base/_fonts.css);
+@import url(utils/_classes.css);
+@import url(layout/_header.css);
+@import url(layout/_footer-m.css);
+@import url(layout/_footer.css);
