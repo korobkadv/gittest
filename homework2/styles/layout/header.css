@@ -62,6 +62,9 @@ nav a {
 .list-registration {
     padding-bottom: 10px;
 }
+li {
+    margin-bottom: 10px;
+}
 @media (min-width: 1600px) {
 .wrap {
     display: flex;
