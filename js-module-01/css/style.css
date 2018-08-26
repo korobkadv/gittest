@@ -28,16 +28,17 @@ a:hover {
 
 main {
     width: 100%;
-    margin: 0px auto;
-}
-
-
-
-.form {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 940px
+    justify-content: center;
+}
+
+.wrapper {
+    width: 540px;
+}
+
+.form {
+    width: 100%;
 }
 
 input {
