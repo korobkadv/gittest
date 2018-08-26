@@ -19,11 +19,11 @@ header {
 
 a, a:visited {
 	text-decoration: none;
-	color: #555252;
+	color: #1abc9c;
 }
 
 a:hover {
-    color: #1abc9c;
+    color: #1a559c;
 }
 
 main {

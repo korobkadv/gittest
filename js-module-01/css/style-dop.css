@@ -7,14 +7,17 @@ body {
 
 a, a:visited {
 	text-decoration: none;
-	color: #555252;
+	color: #1abc9c;
 }
 
 a:hover {
-    color: #1abc9c;
+    color: #1a559c;
 }
 header {
-    padding: 50px;
+    width: 940px;
+    border: 0px solid #626262;
+    margin: 0px auto;
+    padding: 0px 0px 83px 0px;
 }
 
 main {
