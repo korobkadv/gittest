@@ -3,7 +3,19 @@ body {
     font-family: "Open Sans", arial, sans-serif;
     font-size: 14px;
     color: #626262;
+    width: 100%;
+    margin: auto;
 }
+
+
+
+header {
+    width: 940px;
+    border: 0px solid #626262;
+    margin: 0px auto;
+    padding: 0px 0px 83px 0px;
+}
+
 
 a, a:visited {
 	text-decoration: none;
@@ -13,17 +25,55 @@ a, a:visited {
 a:hover {
     color: #1abc9c;
 }
-header {
-    padding: 50px;
-}
 
 main {
     width: 100%;
     margin: 0px auto;
+}
+
+
+
+.form {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    width: 940px
 }
-.wrapper {
-    width: 500px ;
-}
+
+input {
+    font-size: 20px;
+    padding: 10px;
+    margin: 0px 0px 28px 0px ;
+    border: 1px solid #999999;
+    width: 430px;
+    
+  }
+
+input:invalid {
+    outline-color: #8A0808 ;
+   }
+input:valid {
+    outline-color: #088A08 ;
+   }
+  
+
+  .submit {
+    width: 240px; 
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #fed136;
+    margin: 0px;
+    padding: 10px;
+  }
+
+button {
+    display: inline-block;
+    font-family: 'Playfair Display', arial, serif;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #4ec6ab;
+    border: 1px solid #4ec6ab;
+    border-radius: 5px;
+    padding: 10px 30px;
+} 
+
