@@ -1,22 +1,32 @@
-let userLogin = prompt('Введите логин:');
+const userLogin = prompt('Введите логин:');
 let userPassword;
+let result;
 const adminLogin = 'admin';
 const adminPassword = 'm4ngo1zh4ackz0r';
 
+const cancel = 'Отменено пользователем!';
+const hello = 'Добро пожаловать!';
+const stop = 'Доступ запрещен!';
+
  if (!userLogin) {
-     alert("Отменено пользователем!");
+    alert(cancel);
+    result = cancel;
  }
  else if (userLogin === adminLogin) {
     userPassword = prompt('Введите пароль:');
         if (!userPassword) {
-            alert("Отменено пользователем!"); 
+            alert(cancel); 
+            result = cancel; 
         }
         else if (userPassword === adminPassword) {
-            alert("Добро пожаловать!");
+            alert(hello);
+            result = hello;
         } else {
-            alert("Доступ запрещен!");
+            alert(stop);
+            result = stop;
         }
  } 
  else {
-    alert("Доступ запрещен!");
+    alert(stop);
+    result = stop;
  }
