@@ -305,7 +305,7 @@ a.button2 {
 
  }
 
- @media (min-width: 1440px) {
+ @media (min-width: 940px) {
      
         header {
             height: 700px;
