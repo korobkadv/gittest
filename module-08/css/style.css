@@ -310,6 +310,8 @@ a.button2 {
         header {
             height: 700px;
             background: #ffffff url("../img/bg3.png");
+            background-position: center top;
+            background-repeat: no-repeat;
         }
 
         .nav-top {
