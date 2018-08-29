@@ -1,5 +1,4 @@
 const userLogin = prompt('Введите логин:');
-let userPassword;
 let result;
 const adminLogin = 'admin';
 const adminPassword = 'm4ngo1zh4ackz0r';
@@ -13,7 +12,7 @@ const stop = 'Доступ запрещен!';
     result = cancel;
  }
  else if (userLogin === adminLogin) {
-    userPassword = prompt('Введите пароль:');
+    const userPassword = prompt('Введите пароль:');
         if (!userPassword) {
             alert(cancel); 
             result = cancel; 
