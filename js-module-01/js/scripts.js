@@ -11,8 +11,8 @@ const stop = 'Доступ запрещен!';
     alert(cancel);    // Выводим "Отменено пользователем!"
     result = cancel;  // Заносим результат в переменную для возможного, дальнейшего использования
  }
- else if (userLogin === adminLogin) { // Если пользователь ввел правильный логин
-    const userPassword = prompt('Введите пароль:'); // Спрашиваем пароль
+ else if (userLogin === adminLogin) {                 // Если пользователь ввел правильный логин
+    const userPassword = prompt('Введите пароль:');   // Спрашиваем пароль
         if (!userPassword) {  // Пользователь нажал "cancel"
             alert(cancel);    // Выводим "Отменено пользователем!"
             result = cancel;  
