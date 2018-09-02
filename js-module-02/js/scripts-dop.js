@@ -16,6 +16,7 @@ do {
       }
       else {
         alert(`Неверный пароль, у вас осталось ${attempts - 1} попыток`);   // При неверном пароле
+        attempts = attempts - 1; // Отсчитываем количество попыток
       }
     }
     else {
@@ -28,6 +29,5 @@ do {
         continue;
       }
     }
-    attempts = attempts - 1; // Отсчитываем количество попыток
  }
 } while(attempts >= 0); 
