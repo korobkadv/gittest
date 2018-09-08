@@ -4,13 +4,18 @@ let total = 0;
 
 
 do {
-    userInput = Number( prompt('Введите число', '') ); // Просим ввести число
-      if (!userInput) { // Если нажали "Cancel" то тормозим
+    userInput = prompt('Введите число', '' ); // Просим ввести число
+
+    if (userInput === null) { // Если нажали "Cancel" то тормозим
           break;
          } 
-      numbers.push(userInput);   // Вводим число в конец массива
-  
-} while(!isNaN(userInput)); // Продолжаем записывать пока вводятся числа
+    else if (!isNaN(parseInt(userInput)) ) { // Проверяем на число
+         userInput = Number(userInput);  
+         numbers.push(userInput);   // Вводим число в конец массива
+    }
+
+} while(!Number.isNaN(userInput)); // Продолжаем записывать пока вводятся числа
+
 
 if (numbers.length) { 
    
