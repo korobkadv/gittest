@@ -4,36 +4,21 @@ const error = 'Ошибка! Логин должен быть от 4 до 16 с�
 const errorTwo = 'Такой логин уже используется!';
 const proffit = 'Логин успешно добавлен!';
 
-const isLoginValid = function(login) {
-    if (login.length >= 4 && login.length <= 16) { 
-      return "true";
-    }  
-    else {  
-      return "false"; 
-    }
-};
-
-const isLoginUnique = function(login) {
-    if (allLogins.includes(login)) { 
-      return "true"; 
-    } 
-    else { 
-      return "false"; 
-    }
-};
+const isLoginValid = login => login.length >= 4 && login.length <=16;
+const isLoginUnique = login => allLogins.includes(login);
 
 const addLogin = function(login) {
  
-  if (isLoginValid(login) === "false" ) { 
+  if (!isLoginValid(login)) { 
     console.log(error);  
    }
-  else if (isLoginUnique(login) === "true" ) {
+  if (isLoginUnique(login)) {
     console.log(errorTwo);  
    }
-  else if (isLoginUnique(login) === "false" && isLoginValid(login) === "true" ) { 
-     allLogins.push(login);
-     console.log(proffit);    
-     }
+  if (!isLoginUnique(login) && isLoginValid(login)) { 
+    allLogins.push(login);
+    console.log(proffit);    
+   }
 
 };
 
