@@ -2,7 +2,6 @@ let userInput;
 const numbers = [];
 let total = 0;
 
-
 do {
     userInput = prompt('Введите число', '' ); // Просим ввести число
 
@@ -15,7 +14,6 @@ do {
     }
 
 } while(!Number.isNaN(userInput)); // Продолжаем записывать пока вводятся числа
-
 
 if (numbers.length) { 
    
