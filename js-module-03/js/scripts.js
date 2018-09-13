@@ -11,13 +11,16 @@ const addLogin = function(login) {
  
   if (!isLoginValid(login)) { 
     console.log(lengthError);  
+    return;
    }
   if (isLoginUnique(login)) {
-    console.log(existanceError);  
+    console.log(existanceError); 
+    return; 
    }
   if (!isLoginUnique(login) && isLoginValid(login)) { 
     allLogins.push(login);
     console.log(successMessage);    
+    return;
    }
 
 };
