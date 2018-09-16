@@ -17,12 +17,8 @@ const addLogin = function(login) {
     console.log(existanceError); 
     return; 
    }
-  if (!isLoginUnique(login) && isLoginValid(login)) { 
     allLogins.push(login);
     console.log(successMessage);    
-    return;
-   }
-
 };
 
 // Вызовы функции для проверки
