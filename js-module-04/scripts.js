@@ -47,13 +47,14 @@ function Cashier(name, productDatabase) {
   this.name = name;
   this.productDatabase = productDatabase;
   this.customerMoney = 0;
+  this.productsOrder = 0;
   
   this.getCustomerMoney = value => {
     return this.customerMoney = value;
   };
   
   this.countTotalPrice = order => {
-   this.productsOrder = 0;
+   
      for (const key in order) {
         this.productsOrder += products[key] * order[key];
       };
