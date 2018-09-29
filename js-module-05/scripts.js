@@ -104,7 +104,7 @@ const getAllNames = arr => {
   return arr.map(user => user.name);
 };
 
-// console.log(getAllNames(users)); 
+console.log(getAllNames(users)); 
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
                             
@@ -115,7 +115,7 @@ const getUsersByEyeColor = (arr, color) => {
   return arr.filter(user => user.eyeColor === color);
 };
 
-// console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
                                             
 /**
@@ -137,7 +137,6 @@ console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazque
 const getInactiveUsers = arr => {
   const filter = arr
     .filter(user => !user.isActive)
-    .map(user => user.name);
   return filter;
 };
 
@@ -208,7 +207,7 @@ const getAllSkills = arr => {
   return skillsAll;
 };
 
-console.log(getAllSkills(users));
+// console.log(getAllSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
                              
@@ -223,5 +222,5 @@ const getUserNamesSortedByFriendsCount = arr => {
   return sort.map(users => users.name);
 };
 
-console.log(getUserNamesSortedByFriendsCount(users)); 
+// console.log(getUserNamesSortedByFriendsCount(users)); 
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
