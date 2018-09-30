@@ -56,7 +56,7 @@ function Cashier(name, productDatabase) {
   this.countTotalPrice = order => {
    
      for (const key in order) {
-        this.productsOrder += products[key] * order[key];
+        this.productsOrder += this.productDatabase[key] * order[key];
       };
        return this.productsOrder;
  } 
