@@ -47,14 +47,13 @@ function Cashier(name, productDatabase) {
   this.name = name;
   this.productDatabase = productDatabase;
   this.customerMoney = 0;
-  this.productsOrder = 0;
   
   this.getCustomerMoney = value => {
-    return this.customerMoney = value;
+    this.customerMoney = value;
   };
   
   this.countTotalPrice = order => {
-   
+    this.productsOrder = 0;
      for (const key in order) {
         this.productsOrder += this.productDatabase[key] * order[key];
       };
@@ -62,27 +61,21 @@ function Cashier(name, productDatabase) {
  } 
 
    this.countChange = totalPrice => {
-    if (this.productsOrder <= this.customerMoney) {
-      this.totalChange = this.customerMoney - this.productsOrder;
-      return this.totalChange;
-    } else {
-      return null;
-    }
+    this.totalChange = this.productsOrder <= this.customerMoney ? 
+        this.customerMoney - this.productsOrder : null;
+    return this.totalChange;
   }
   
   this.onSuccess = change => {
     console.log(`Спасибо за покупку, ваша сдача ${change}!`);
-    return;
   }
   
   this.onError = () => {
     console.log(`Очень жаль, вам не хватает денег на покупки`);
-    return;
   }
   
   this.reset = () => {
     this.customerMoney = 0;
-    return;
   }
 }
 /* Заказ пользователя хранится в виде объекта следующего формата. "имя-продукта":"количество-единиц" */
