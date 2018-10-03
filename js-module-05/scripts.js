@@ -170,8 +170,7 @@ console.log(getUsersWithAge(users, 30, 40)); // [объект Moore Hensley, о�
  */
 const getTotalBalance = arr => {
   const balance = arr
-    .map(user => user.balance)
-    .reduce((acc, value) => acc + value, 0);
+    .reduce((acc, value) => acc + value.balance, 0);
   return balance;
 };
 console.log(getTotalBalance(users)); // 20916
@@ -187,6 +186,7 @@ console.log(getTotalBalance(users)); // 20916
 //    });
 //   return friends;
 //   };
+
 const getUsersByFriend = (arr, name) => arr
    .filter(user => user.friends.includes(name))
    .map(arr => arr.name);
