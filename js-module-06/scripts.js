@@ -37,7 +37,7 @@ class Hamburger {
    */
   addTopping(topping) {
      if (!this._toppings.includes(topping)) {
-           this._toppings.push(topping);
+         this._toppings.push(topping);
        };    
   }
 
@@ -80,6 +80,17 @@ class Hamburger {
   get getStuffing() {
     return this._stuffing
   }
+  
+   /**
+   * Узнать цену или калории гамбургера
+   * @returns {Number} - Цена в деньгах
+   *
+   * Попробуйте сделать это геттером чтобы можно было обращаться как obj.price и нам вернет сумму.
+   */
+   calculateAll(calc) {
+    const priceToppings = this._toppings.reduce((acc, value) => acc + Hamburger.TOPPINGS[value][calc], 0);
+    return priceToppings + Hamburger.SIZES[this._size][calc] + Hamburger.STUFFINGS[this._stuffing][calc];
+   } 
 
   /**
    * Узнать цену гамбургера
@@ -87,10 +98,8 @@ class Hamburger {
    *
    * Попробуйте сделать это геттером чтобы можно было обращаться как obj.price и нам вернет сумму.
    */
-  get calculatePrice() {
-    const priceToppings = this._toppings.reduce((acc, value) => acc + Hamburger.TOPPINGS[value]["price"], 0);
-    const price = priceToppings + Hamburger.SIZES[this._size]["price"] + Hamburger.STUFFINGS[this._stuffing]["calories"];
-    return price;
+  get calculatePrice() {  
+    return this.calculateAll("price");
   }
 
   /**
@@ -99,12 +108,12 @@ class Hamburger {
    *
    * Попробуйте сделать это геттером чтобы можно было обращаться как obj.calories и нам вернет сумму.
    */
-  get calculateCalories() {
-    const caloriesToppings = this._toppings.reduce((acc, value) => acc + Hamburger.TOPPINGS[value]["calories"], 0);
-    const calories = caloriesToppings + Hamburger.SIZES[this._size]["calories"] + Hamburger.STUFFINGS[this._stuffing]["calories"];
-    return calories;
+  get calculateCalories() {  
+    return this.calculateAll("calories");
   }
 }
+  
+
 
 /*
   Размеры, виды добавок и начинок объявите как статические поля класса.
