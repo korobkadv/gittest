@@ -104,7 +104,7 @@ const getAllNames = arr => {
   return arr.map(user => user.name);
 };
 
-console.log(getAllNames(users)); 
+// console.log(getAllNames(users)); 
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
                             
@@ -115,7 +115,7 @@ const getUsersByEyeColor = (arr, color) => {
   return arr.filter(user => user.eyeColor === color);
 };
 
-console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+// console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
                                             
 /**
@@ -128,7 +128,7 @@ const getUsersByGender = (arr, gender) => {
   return filter;
 };
 
-console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+// console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 
 /**
@@ -140,7 +140,7 @@ const getInactiveUsers = arr => {
   return filter;
 };
 
-console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+// console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
                       
                                  
 /**
@@ -150,8 +150,8 @@ const getUserByEmail = (arr, email) => {
   return arr.find(user => user.email === email);
 };
 
-console.log(getUserByEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
-console.log(getUserByEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
+// console.log(getUserByEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
+// console.log(getUserByEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
 
 
 /**
@@ -161,8 +161,8 @@ const getUsersWithAge = (arr, min, max) => {
   return arr.filter(user => user.age >= min && user.age <= max);
 };
 
-console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]                                           
-console.log(getUsersWithAge(users, 30, 40)); // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
+// console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]                                           
+// console.log(getUsersWithAge(users, 30, 40)); // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
                                  
                                  
 /**
@@ -173,7 +173,7 @@ const getTotalBalance = arr => {
     .reduce((acc, value) => acc + value.balance, 0);
   return balance;
 };
-console.log(getTotalBalance(users)); // 20916
+// console.log(getTotalBalance(users)); // 20916
                                 
                                 
 /**
@@ -190,8 +190,8 @@ console.log(getTotalBalance(users)); // 20916
 const getUsersByFriend = (arr, name) => arr
    .filter(user => user.friends.includes(name))
    .map(arr => arr.name);
-console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]                                        
+// console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+// console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]                                        
 
 
 
@@ -207,10 +207,23 @@ const getAllSkills = arr => {
   const skillsAll = arr
     .reduce( (acc, x) => x.skills ? acc.concat(x.skills) : acc, [] )
     .sort();
-  return skillsAll;
+  
+   const getTagStats = (acc, tag) => {
+    if(!acc.hasOwnProperty(tag)) {
+      acc[tag] = tag;
+    }
+    return acc;
+  };
+  const countTags = arr => arr.reduce(getTagStats, {});
+  const tagCount = countTags(skillsAll);
+  let total = [];
+  for (var key in tagCount) {
+        total.push(key);
+  }
+   return total;
 };
 
-// console.log(getAllSkills(users));
+console.log(getAllSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
                              
@@ -218,8 +231,7 @@ const getAllSkills = arr => {
 * Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 */
 const getUserNamesSortedByFriendsCount = arr => {
-  
-  const friendsCount = arr.map(user => user.friendsLengt = user["friends"].length);
+
   const sortByActiveDays = (a, b) => a.friendsLengt - b.friendsLengt;
   const sort = arr.sort(sortByActiveDays);
   return sort.map(users => users.name);
