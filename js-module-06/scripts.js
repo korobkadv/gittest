@@ -46,9 +46,7 @@ class Hamburger {
    * @param {String} topping - Тип добавки
    */
   removeTopping(topping) {
-    if (this._toppings.includes(topping)) {
          this._toppings = this._toppings.filter(top => top !== topping);
-      }; 
   }
 
   /**
@@ -83,13 +81,13 @@ class Hamburger {
   
    /**
    * Узнать цену или калории гамбургера
-   * @returns {Number} - Цена или калории в деньгах
+   * @returns {Number} - Цена в деньгах
    *
    * Попробуйте сделать это геттером чтобы можно было обращаться как obj.price и нам вернет сумму.
    */
    calculateAll(calc) {
-    const priceToppings = this._toppings.reduce((acc, value) => acc + Hamburger.TOPPINGS[value][calc], 0);
-    return priceToppings + Hamburger.SIZES[this._size][calc] + Hamburger.STUFFINGS[this._stuffing][calc];
+    const price = this._toppings.reduce((acc, value) => acc + Hamburger.TOPPINGS[value][calc], 0);
+    return price + Hamburger.SIZES[this._size][calc] + Hamburger.STUFFINGS[this._stuffing][calc];
    } 
 
   /**
@@ -113,6 +111,8 @@ class Hamburger {
   }
 }
   
+
+
 /*
   Размеры, виды добавок и начинок объявите как статические поля класса.
   Добавьте отсутсвующие поля по аналогии с примером.
