@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px 0px 50px 0px;
+  }
+
+  .preview {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    width: 1280px;
+  }
+
+  .preview li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fullview img {
+    width: 1280px;
+  }
+
+  .preview img {
+    width: 100%;
+  }
+  .preview img:hover {
+    width: 97%;
+    border: 5px solid rgb(3, 161, 16);
+    border-radius: 5px;
+    margin: -5px;
+    padding: 0px;
+  }
+
+  .preview .imgactive {
+    width: 97%;
+    border: 5px solid rgb(146, 2, 2);
+    border-radius: 5px;
+    margin: -5px;
+    padding: 0px;
+  }
