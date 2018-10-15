@@ -7,8 +7,6 @@ const galleryItems = [
   { preview: 'img/preview-6.jpeg', fullview: 'img/fullview-6.jpeg', alt: "alt text 6" },
 ];
 
-
-
 const createDiv = document.querySelector(".js-image-gallery");
 const createFullview = document.createElement("div")
 createFullview.classList.add("fullview");
@@ -40,6 +38,7 @@ function fullviewImg(evt) {
   if (currentActiveLink) {
     currentActiveLink.classList.remove("imgactive");
   }
+
   evt.target.classList.add("imgactive");
 }
 
