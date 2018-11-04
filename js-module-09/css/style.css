@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+
+  .watch {
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+    color: #212121;
+    border-radius: 2px;
+  }
+
+  .watch-text {
+    margin-bottom: 15px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 80px;
+  }
+  
+  .watch-button {
+    display: inline;
+    text-transform: uppercase;
+    border: 0;
+    background-color: #212121;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 28px;
+    border-radius: 2px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .watch-button:hover {
+    background-color: #0b046d;
+  }
+  
+  .watch-button:active {
+    background-color: #046d12;
+  }
+  
+ 
+
+  .watch-list {
+    height: 10rem;
+    overflow: auto;
+  }
