@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>JS Модуль 10</title>
+</head>
+
+<body>	
+	<nav>
+		<h1>JS модуль 10</h1>
+			<ul class="navigation">
+				<li class="menu-item getAllUsers">Список пользователей</li>
+				<li class="menu-item getUserById">Найти пользователя</li>
+				<li class="menu-item addUser">Добавить пользователя</li>
+				<li class="menu-item removeUser">Удалить пользователя</li>
+				<li class="menu-item updateUser">Обновить данные пользователя</li>
+			</ul>
+	</nav>
+	<div class="container">
+
+		<form class="getAllUsers-form hover">
+			<p>Возможно понадобится немного времени</p>
+				<button class="mdc-btn js-get" type="submit">Отобразить список пользователей</button>
+		</form>
+
+		<form class="getUserById-form hover">
+		  <input type="text" name="country" class="input-get-id" placeholder="Enter user id">
+		  <button class="mdc-btn js-get-id" type="submit">Найти</button>
+		</form>
+
+		<form class="addUser-form hover">
+				<input type="text" name="country" class="input-add-name" placeholder="Enter name">
+				<input type="text" name="country" class="input-add-age" placeholder="Enter age">
+				<button class="mdc-btn js-add" type="submit">Добавить</button>
+		</form>
+
+		<form class="removeUser-form hover">
+				<input type="text" name="country" class="input-dell-id" placeholder="Enter id">
+				<button class="mdc-btn js-remove" type="submit">Удалить</button>
+		</form>
+
+		<form class="updateUser-form hover">
+				<input type="text" name="country" class="input-put-id"  placeholder="Enter id">
+				<input type="text" name="country" class="input-put-name" placeholder="Enter name">
+				<input type="text" name="country" class="input-put-age" placeholder="Enter age">
+				<button class="mdc-btn js-update" type="submit">Обновить</button>
+		</form>
+
+		<p class="result"></p>
+	</div>
+
+	<script src="./js/scripts.js"></script>
+</body>
+
+</html>
