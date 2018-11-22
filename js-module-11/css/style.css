@@ -42,8 +42,14 @@ section {
   width: 100%;
 }
 
-button {
+.submit {
   height: 200px;
   padding: 50px;
   background-color: #71fa6c;
+}
+
+.reset {
+  height: 200px;
+  padding: 50px;
+  background-color: #dbfa6c;
 }
