@@ -7,24 +7,29 @@ const galleryItems = [
   { preview: 'img/preview-6.jpeg', fullview: 'img/fullview-6.jpeg', alt: "alt text 6" },
 ];
 
-const createDiv = document.querySelector(".js-image-gallery");
+const getDiv = document.querySelector(".image-gallery");
 const createFullview = document.createElement("div")
 createFullview.classList.add("fullview");
-createDiv.append(createFullview);
+getDiv.append(createFullview);
 const createPreview = document.createElement("ul");
 createPreview.classList.add("preview");
-createDiv.append(createPreview);
+getDiv.append(createPreview);
 
+const list = document.querySelector(".preview");
 
-const fullview = document.querySelector(".fullview");
-const createImgFullview = document.createElement("img")
+function fullView(galleryItems) {
+  const fullview = document.querySelector(".fullview");
+  const createImgFullview = document.createElement("img")
 createImgFullview.setAttribute("src", galleryItems[0]["fullview"]);
 createImgFullview.setAttribute("alt",  galleryItems[0]["alt"]);
 createImgFullview.setAttribute("class",  "fullviewImg");
 fullview.append(createImgFullview);
+}
+
+fullView(galleryItems);
 
 const list2 = document.querySelector(".preview");
-list2.addEventListener('click', fullviewImg);
+
 
 function fullviewImg(evt) {
   evt.preventDefault();
@@ -44,7 +49,7 @@ function fullviewImg(evt) {
 
 galleryItems.forEach(
   function (preview) {
-    const list = document.querySelector(".preview");
+    
     const createLi = document.createElement("li");
     const str =  preview['alt'].replace(/\s+/g, '');
     createLi.setAttribute("class", str);
@@ -59,5 +64,4 @@ galleryItems.forEach(
   }
 );
 
-
-
+list2.addEventListener('click', fullviewImg);
