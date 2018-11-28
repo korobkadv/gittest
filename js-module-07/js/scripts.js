@@ -11,42 +11,7 @@
     
   3. Повесьте все посты в какой-то уже существующий DOM-узел.
 */
-  
-const createCards = posts => {
-    
-    for (let i = 0; i < posts.length; i++) {
-      
-    const list = document.querySelector("main");
-    const createDiv = document.createElement("div");
-    createDiv.setAttribute("class", `post nom${i}`);
-    list.append(createDiv);
-    
-    const selectDiv = document.querySelector(`.nom${i}`);
-      
-      const createImg = document.createElement("img");
-      createImg.classList.add("post__image");
-      createImg.setAttribute("src", posts[i]["img"]);
-      createImg.setAttribute("alt", "post image");
-      selectDiv.append(createImg);
-    
-      const createTitle = document.createElement("h2");
-      createTitle.classList.add("post__title");
-      createTitle.textContent = posts[i]["title"];
-      selectDiv.append(createTitle);
-    
-      const createText = document.createElement("p");
-      createText.classList.add("post__text");
-      createText.textContent = posts[i]["text"];
-      selectDiv.append(createText);
-    
-      const createLink = document.createElement("a");
-      createLink.classList.add("button");
-      createLink.textContent = posts[i]["link"];
-      createLink.setAttribute("href", "#");
-      selectDiv.append(createLink);
-    }
-  }
-  
+
 const posts = [
   {
     img: "https://placeimg.com/400/150/arch",
@@ -68,4 +33,41 @@ const posts = [
   }
 ];
 
- createCards(posts);
+const createPostCard = ({ img, title, text, link }) => {
+  const card = document.createElement('div');
+  card.classList.add('post');
+
+  const images = document.createElement('img');
+  images.classList.add('post__image');
+  images.setAttribute('src', img);
+  images.setAttribute('alt', 'post image');
+
+  const name = document.createElement('h2');
+  name.classList.add('post__title');
+  name.textContent = title;
+
+  const descr = document.createElement('p');
+  descr.classList.add('post__text');
+  descr.textContent = text;
+
+  const links = document.createElement('a');
+  links.classList.add('button');
+  links.textContent = link;
+ 
+  card.append(images, name, descr, links);
+
+  return card;
+};
+
+const createCards = posts => {
+  const elements = posts.map(post => createPostCard(post));
+
+  return elements;
+};
+
+const postsDOM = document.querySelector('main');
+const cards = createCards(posts);
+
+// console.log(cards);
+
+postsDOM.append(...cards);
