@@ -1,27 +1,12 @@
-
 const navigation = document.querySelector('.navigation');
 const menuItem = document.querySelector('.menu-item');
 const result = document.querySelector('.result');
-
-const getAllUsers = document.querySelector('.getAllUsers');
-const getUserById = document.querySelector('.getUserById');
-const addUser = document.querySelector('.addUser');
-const removeUser = document.querySelector('.removeUser');
-const updateUser = document.querySelector('.updateUser');
 
 const getAllUsersForm = document.querySelector('.getAllUsers-form');
 const getUserByIdForm = document.querySelector('.getUserById-form');
 const addUserForm = document.querySelector('.addUser-form');
 const removeUserForm = document.querySelector('.removeUser-form');
 const updateUserForm = document.querySelector('.updateUser-form');
-
-const input = document.querySelector(".input-get-id");
-const inputAddName = document.querySelector(".input-add-name");
-const inputAddAge = document.querySelector(".input-add-age");
-const inputDell = document.querySelector(".input-dell-id");
-const inputPutId = document.querySelector(".input-put-id");
-const inputPutName = document.querySelector(".input-put-name");
-const inputPutAge = document.querySelector(".input-put-age");
 
 const apiUrl = "https://test-users-api.herokuapp.com/users/";
 
@@ -48,47 +33,35 @@ const apiUrl = "https://test-users-api.herokuapp.com/users/";
     updateUserForm.classList.add("hover");
   }
 
-  getAllUsers.addEventListener("click", getUsersForm);
-
-  function getUsersForm(event) {
-    event.preventDefault();
-    allHover();
-    getAllUsersForm.classList.remove("hover");
-
+  const handleClick = (e) => {
+    if (e.target && e.target.matches("li.getAllUsers")) {
+      allHover();
+      getAllUsersForm.classList.remove("hover");
+      result.innerHTML = '';
+    }
+    if (e.target && e.target.matches("li.getUserById")) {
+      allHover();
+      getUserByIdForm.classList.remove("hover");
+      result.innerHTML = '';
+    }
+    if (e.target && e.target.matches("li.addUser")) {
+      allHover();
+      addUserForm.classList.remove("hover");
+      result.innerHTML = '';
+    }
+    if (e.target && e.target.matches("li.removeUser")) {
+      allHover();
+      removeUserForm.classList.remove("hover");
+      result.innerHTML = '';
+    }
+    if (e.target && e.target.matches("li.updateUser")) {
+      allHover();
+      updateUserForm.classList.remove("hover");
+      result.innerHTML = '';
+    }
   }
-    
-  getUserById.addEventListener("click", getUserForm);
-
-  function getUserForm(event) {
-    event.preventDefault();
-    allHover();
-    getUserByIdForm.classList.remove("hover");
-
-  }
-
-  addUser.addEventListener("click", addForm);
-
-  function addForm(event) {
-    event.preventDefault();
-    allHover();
-    addUserForm.classList.remove("hover");
-  }
-
-  removeUser.addEventListener("click", removeForm);
-
-  function removeForm(event) {
-    event.preventDefault();
-    allHover();
-    removeUserForm.classList.remove("hover");
-  }
-
-  updateUser.addEventListener("click", updateForm);
-
-  function updateForm(event) {
-    event.preventDefault();
-    allHover();
-    updateUserForm.classList.remove("hover");
-  }
+  
+  navigation.addEventListener('click', handleClick);
 
   // ==============Выборка
 
@@ -159,7 +132,9 @@ return markupAllUsers;
        }
      };
      
-         fetchUsers(input.value, option).then(searchUsers);
+     let [id] = getUserByIdForm.elements;
+
+         fetchUsers(id.value, option).then(searchUsers);
      e.target.reset();
     };
     
@@ -183,9 +158,12 @@ return markupAllUsers;
     }
     const handleFormSubmitAdd = e => {
       e.preventDefault();
+
+      let [name, age] = addUserForm.elements;
+
       const newUser = {
-        name: inputAddName.value,
-        age: inputAddAge.value,
+        name: name.value,
+        age: age.value,
       };
       const option = {
         method: 'POST',
@@ -196,7 +174,7 @@ return markupAllUsers;
         }
      };
      
-         fetchUsers(input.value, option).then(addUsers);
+         fetchUsers("", option).then(addUsers);
      e.target.reset();
     };
 
@@ -222,7 +200,9 @@ return markupAllUsers;
             'Content-Type': 'application/json',
           }
        };
-           fetchUsers(inputDell.value, option).then(removeUsers);
+       let [id] = removeUserForm.elements;
+
+           fetchUsers(id.value, option).then(removeUsers);
        e.target.reset();
       };
       
@@ -246,9 +226,12 @@ return markupAllUsers;
           }
           const handleFormSubmitPut = e => {
             e.preventDefault();
+
+            let [id, name, age] = updateUserForm.elements;
+
             const newUser = {
-              name: inputPutName.value,
-              age: inputPutAge.value,
+              name: name.value,
+              age: age.value,
             };
             const option = {
               method: 'PUT',
@@ -258,7 +241,7 @@ return markupAllUsers;
                 'Content-Type': 'application/json',
               }
            };
-               fetchUsers(inputPutId.value, option).then(putUsers);
+               fetchUsers(id.value, option).then(putUsers);
            e.target.reset();
           };
           
