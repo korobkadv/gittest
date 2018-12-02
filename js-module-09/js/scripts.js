@@ -4,26 +4,34 @@ class StopWatch {
     this.btnStart = parent.querySelector('.watch-start');
     this.btnSplit = parent.querySelector('.watch-split');
     this.btnReset = parent.querySelector('.watch-reset');
+
     this.list = parent.querySelector('.watch-list');
     this.text = parent.querySelector('.watch-text');
     this.setIntervalId = null;
     this.from = null;
     this.to = null;
+
+    this.isTimerActive = false; //лічильник ще не запустили
+    this.isDelay = false; //не натиснули на Pause
   }
+ 
 
   startBtnOnClick() {
-    if (this.btnStart.textContent.toLowerCase() == 'start') {
+    if (!this.isTimerActive) {
       this.start();
       this.btnStart.textContent = 'pause';
-    } else if (this.btnStart.textContent.toLowerCase() == 'pause') {
+      this.isTimerActive = true;
+    } else if (this.isTimerActive && !this.isDelay) {
       this.btnStart.textContent = 'continue';
       this.pause();
-    } else if (this.btnStart.textContent.toLowerCase() == 'continue') {
+      this.isDelay = true;
+    } else if (this.isTimerActive && this.isDelay) {
       this.btnStart.textContent = 'pause';
-      this.continue();
+      this.continueTime();
+      this.isDelay = false;
     }
   }
-  continue() {
+  continueTime() {
     this.from = Date.now() - (this.to - this.from);
     this.step();
   }
@@ -60,6 +68,8 @@ class StopWatch {
     this.text.textContent = this.toTimeString(0);
     this.btnStart.textContent = 'start';
     this.list.innerHTML = '';
+    this.isDelay = false;
+    this.isTimerActive = false;
   }
 
   toTimeString(timeStamp) {
@@ -77,7 +87,9 @@ class StopWatch {
     this.btnStart.addEventListener("click", this.startBtnOnClick.bind(this));
     this.btnReset.addEventListener("click", this.resetBtnOnClick.bind(this));
     this.btnSplit.addEventListener("click", this.splitBtnOnClick.bind(this));
+
   }
+  
 }
 
 const stopWatch = new StopWatch (document.querySelector('.watch'));
