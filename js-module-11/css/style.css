@@ -1,6 +1,23 @@
 body {
   font-family: "Roboto", sans-serif;
   background: #fff;
+
+  display: flex;
+  flex-wrap: row;
+  justify-content: flex-start;
+}
+
+nav {
+width: 250px;
+border: 1px solid #CCCCCC;
+}
+
+main {
+  width: 700px;
+}
+
+h2 {
+  font-size: 14px;
 }
 
 li {
@@ -13,12 +30,12 @@ li {
   color: #212121;
   transition: background-color 0.1s linear;
 }
-
+/* 
 .js-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
+} */
 
 section {
   margin: 0px 50px;
@@ -33,7 +50,7 @@ section {
 } 
 
 .item {
-  width: 220px;
+  width: 150px;
   padding: 10px;
   margin: 10px 10px;
 }
@@ -43,13 +60,15 @@ section {
 }
 
 .submit {
-  height: 200px;
-  padding: 50px;
-  background-color: #71fa6c;
+  width: 70px;
+  height: 30px;
+  padding: 5px;
+  margin: auto 10px; 
 }
 
 .reset {
-  height: 200px;
-  padding: 50px;
-  background-color: #dbfa6c;
+  width: 70px;
+  height: 30px;
+  padding: 5px;
+  margin: auto 10px; 
 }
